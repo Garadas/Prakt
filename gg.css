@@ -1,0 +1,54 @@
+body {
+    background-color: cadetblue;
+    padding-top: 25vh;
+}
+
+div {
+    background-color: aliceblue;
+    margin: auto;
+    border-radius: 20px;
+    padding: 15px;
+    height: 60%;
+    width: 50%;
+    box-shadow: 3px 3px 20px 3px;
+}
+
+table {
+    text-align: center;
+    border-spacing: 45px;
+    height: 75%;
+}
+
+p {
+    text-align: center;
+    height: auto;
+}
+
+#q1 {
+    font-size: 25px;
+}
+
+#q2 {
+    font-size: 20px;
+}
+
+tr {
+    margin: auto;
+}
+
+td {
+    background-color: wheat;
+    border-radius: 5px;
+    margin: 5px;
+    width: 200px;
+    height: 30px;
+    font-size: medium;
+}
+
+.prav{
+    background-color: greenyellow;
+}
+
+.loj {
+    background-color: crimson;
+}
