@@ -15,13 +15,16 @@ div {
 
 table {
     text-align: center;
-    border-spacing: 45px;
-    height: 75%;
+    border-spacing: 30px;
+    height: 65%;
+    width: 100%;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 15px;
 }
 
 p {
     text-align: center;
-    height: auto;
 }
 
 #q1 {
@@ -34,15 +37,17 @@ p {
 
 tr {
     margin: auto;
+
 }
 
 td {
     background-color: wheat;
     border-radius: 5px;
     margin: 5px;
-    width: 200px;
+    width: 170px;
     height: 30px;
     font-size: medium;
+
 }
 
 .prav{
