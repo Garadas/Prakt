@@ -8,14 +8,18 @@
 
 <body>
     <script src="gg.js"></script>
-    <div>
-        <p id="q1">Question 1/7</p>
-            <p id="q2">How many planets are in the solar system?</p>
+        <button id="red" onclick="theme('r')">red</button>
+        <button id="blue" onclick="theme('b')">blue</button>
+        <button id="green" onclick="theme('g')">green</button>
+        <button id="normal" onclick="theme('norm')">normal</button>
+    <div class="que" id="qque">
+        <h1 id="q1">Question 1/7</h1>
+            <h2 id="q2">How many planets are in the solar system?</h2>
             
             <table>
             <tr>
-                <td id="a" onclick="calc('a')">8</td>
-                <td id="aa" onclick="calc('aa')">9</td>
+                <td id="a" onclick="calc('a')"><p>8</p></td>
+                <td id="aa" onclick="calc('aa')"><p>9</p></td>
             </tr>
             <tr>
                 <td id="aaa" onclick="calc('aaa')">10</td>

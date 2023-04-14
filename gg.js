@@ -2,27 +2,76 @@ let quest = 1;
 let sum = 0;
 let idproof = '';
 
+var back=localStorage.getItem('s1');
+var but="wheat";
+var fie=localStorage.getItem('s2');
+var rig=localStorage.getItem('s3');
+var fal=localStorage.getItem('s4');
+
+
+function loadout(){
+document.body.style.backgroundColor=back;
+document.querySelector(".que").style.backgroundColor=fie;
+}
+loadout();
+
+
+function theme(color){
+    switch(color){
+case 'r':
+    back="red";
+    fie="salmon";
+    rig="HotPink";
+    fal="FireBrick";
+    break;
+case 'norm':
+         back="cadetblue";
+         fie="aliceblue";
+         rig="lightgreen";
+         fal="salmon";
+         break;
+case 'b':
+        back="DeepSkyBlue";
+        fie="PowderBlue";
+        rig="Aqua";
+        fal="SteelBlue";
+        break;
+case 'g':
+    back="GreenYellow";
+    fie="DarkSeaGreen";
+    rig="Yellow";
+    fal="DarkOliveGreen";
+    break;
+}
+    document.body.style.backgroundColor=back;
+    document.querySelector(".que").style.backgroundColor=fie;
+    localStorage.setItem('s1', back);
+    localStorage.setItem('s2', fie);
+    localStorage.setItem('s3', rig);
+    localStorage.setItem('s4', fal);
+}
+
 function tr(id) {
     sum++;
-    document.getElementById(id).style.backgroundColor = "lightgreen";
+    document.getElementById(id).style.backgroundColor = rig;
 }
 
 function tr2(id) {
     if (id != idproof) {
         sum = sum + 0.5;
-        document.getElementById(id).style.backgroundColor = "lightgreen";
+        document.getElementById(id).style.backgroundColor = rig;
     }
     else quest--;
     quest = quest - 0.5;
 }
 
 function fl(id) {
-    document.getElementById(id).style.backgroundColor = "red";
+    document.getElementById(id).style.backgroundColor = fal;
 }
 
 function fl2(id) {
     if (id != idproof)
-        document.getElementById(id).style.backgroundColor = "red";
+        document.getElementById(id).style.backgroundColor = fal;
     else quest--;
     quest = quest - 0.5;
 }
@@ -109,29 +158,19 @@ async function calc(id) {
         document.getElementById('aaaa').innerHTML = "Retry?";
     }
     if (quest >= 9) {
-        if (id == 'aaaa') {
-            quest = 1;
-            sum = 0;
-            idproof = '';
-            document.getElementById('q2').innerHTML = "How many planets are in the solar system?";
-            document.getElementById('a').innerHTML = "8";
-            document.getElementById('aa').innerHTML = "9";
-            document.getElementById('aaa').innerHTML = "10";
-            document.getElementById('aaaa').innerHTML = "7";
-            document.getElementById('q1').innerHTML = "Question " + quest + "/7";
-        }
+        if (id == 'aaaa') window.location.reload();
     }
-    if (quest < 8) {
-        document.getElementById('q1').innerHTML = "Question " + Math.floor(quest) + "/7";
-    }
+    if (quest < 8) document.getElementById('q1').innerHTML = "Question " + Math.floor(quest) + "/7";
     else document.getElementById('q1').innerHTML = "Quiz was complited!!!";
-    if (quest != 5.5) document.getElementById(id).style.backgroundColor = "wheat";
-    if (quest == 6) {
-        document.getElementById('aaaa').style.backgroundColor = "wheat";
-        document.getElementById('aaa').style.backgroundColor = "wheat";
-        document.getElementById('aa').style.backgroundColor = "wheat";
-        document.getElementById('a').style.backgroundColor = "wheat";
-    }//альтернатива?
+
+    if (quest != 5.5) document.getElementById(id).style.backgroundColor = but;
+    
+    if (quest == 6) { 
+    document.getElementById('aaaa').style.backgroundColor = but;
+    document.getElementById('aaa').style.backgroundColor = but;
+    document.getElementById('aa').style.backgroundColor = but;
+    document.getElementById('a').style.backgroundColor = but;
+    }
 }
 
 function sleep(ms) {
